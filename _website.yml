@@ -1,0 +1,64 @@
+website:
+
+  title: "OSP Module Template"
+
+  site-url: "https://www.openstatprog.com/module-template/"
+
+  page-navigation: true
+
+  back-to-top-navigation: true
+
+  navbar:
+    title: false
+    background: primary
+    foreground: dark
+    left:
+      - href: "https://www.openstatprog.com"
+        text: "Open-Stat-Prog"
+      - href: index.qmd
+    tools:
+      - icon: github
+        menu:
+          - text: Source Code
+            href: https://github.com/open-stat-prog/module-template
+          - text: Report a Bug
+            href: https://github.com/open-stat-prog/module-template/issues
+
+  sidebar:
+    style: "floating"
+    collapse-level: 1
+    contents:
+      - href: index.qmd
+        text: "Overview"
+      - section: tutorials/first_topic/index.qmd
+        text: "First Tutorial"
+        contents:
+        - href: tutorials/first_topic/fundamentals.qmd
+        - href: tutorials/first_topic/mathematical_operators.qmd
+        - href: quizzes/first_topic/index.qmd
+          text: "Knowledge Quiz"
+      - section: tutorials/next_topic/index.qmd
+        text: "Second Tutorial"
+        contents:
+          - href: tutorials/next_topic/functions.qmd
+          - href: quizzes/next_topic/index.qmd
+            text: "Knowledge Quiz"
+      - section: tutorials/last_topic/index.qmd
+        text: "Third Tutorial"
+        contents:
+          - href: tutorials/last_topic/installing.qmd
+          - href: tutorials/last_topic/loading.qmd
+          - href: tutorials/last_topic/loading.qmd
+          - href: quizzes/last_topic/index.qmd
+            text: "Knowledge Quiz"
+      - href: conclusion.qmd
+
+  page-footer:
+    background: primary
+    foreground: dark
+    left: |
+      [![](/assets/images/UU_logo_2021_EN_BLACK.png){fig-alt="UU" width=200px}](https://uu.nl) 
+    right: 
+      - text: "&copy; 2025"
+      - href: "https://github.com/open-stat-prog"
+        text: Open-Stat-Prog
