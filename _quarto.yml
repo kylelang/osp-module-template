@@ -9,7 +9,6 @@ format:
       - solar
       - html/custom.scss
     css:
-      # - html/styles.css
       - html/webex.css
     toc: true
     link-external-icon: true
@@ -39,19 +38,15 @@ custom-callout:
   reading:
     title: "Reading"
     icon-symbol: "fa-book-open"
-    color: "violet"
-  adv_reading:
+    color: "purple"
+  reading-advanced:
     title: "Advanced Reading"
     icon-symbol: "fa-book-open"
     color: "red"
-  link:
+  resource:
     title: "External Resources"
     icon-symbol: "fa-link"
     color: "orange"
-  # quiz:
-  #   title: "Knowledge Quiz"
-  #   icon-symbol: "fa-mortar-board"
-  #   color: "violet"
 
 filters:
   - webr

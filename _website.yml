@@ -30,26 +30,20 @@ website:
     contents:
       - href: index.qmd
         text: "Overview"
-      - section: tutorials/first_topic/index.qmd
+      - section: tutorials/first_tutorial/index.qmd
         text: "First Tutorial"
         contents:
-        - href: tutorials/first_topic/fundamentals.qmd
-        - href: tutorials/first_topic/mathematical_operators.qmd
-        - href: quizzes/first_topic/index.qmd
+        - href: tutorials/first_tutorial/topic1.qmd
+        - href: tutorials/first_tutorial/topic2.qmd
+        - href: tutorials/first_tutorial/topic3.qmd
+        - href: quizzes/first_tutorial/index.qmd
           text: "Knowledge Quiz"
-      - section: tutorials/next_topic/index.qmd
+      - section: tutorials/second_tutorial/index.qmd
         text: "Second Tutorial"
         contents:
-          - href: tutorials/next_topic/functions.qmd
-          - href: quizzes/next_topic/index.qmd
-            text: "Knowledge Quiz"
-      - section: tutorials/last_topic/index.qmd
-        text: "Third Tutorial"
-        contents:
-          - href: tutorials/last_topic/installing.qmd
-          - href: tutorials/last_topic/loading.qmd
-          - href: tutorials/last_topic/loading.qmd
-          - href: quizzes/last_topic/index.qmd
+          - href: tutorials/second_tutorial/topic1.qmd
+          - href: tutorials/second_tutorial/topic2.qmd
+          - href: quizzes/second_tutorial/index.qmd
             text: "Knowledge Quiz"
       - href: conclusion.qmd
 
