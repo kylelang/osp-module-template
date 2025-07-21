@@ -14,7 +14,7 @@ This module provides the framework to set up a new Open Statistical Programming 
 
 ## Style Guidelines
 
-- Follow the tidyverse style guide.
+- Follow the [tidyverse style guide](https://style.tidyverse.org/).
 - Break long lines at 120 characters (approximately).
    - Don't rely on your IDE's visual line breaking feature: actually break the lines in the source code.
 - No spaces in file names.
