@@ -5,6 +5,8 @@ Statistical Programming Tutorials organization.
 
 ## Using the Template to Create a New OSP Module
 
+### Preparing the GitHub Repository
+
 1. Create a new repository, say `my-module-repo`, on GitHub.
    - Set the repository owner as the `open-stat-prog` organization.
    - Select the `open-stat-prog/module-template` as the repository template.
@@ -18,21 +20,54 @@ Statistical Programming Tutorials organization.
    git remote add upstream https://github.com/open-stat-prog/my-module-repo.git
    ```
 
-1. Run `renv::restore()` from the root directory of `my-local-repo`.
-   - You can just source `R/install_packages.R`, since `renv::restore()` is the only uncommented command in that file.
-1. Run `quarto render` from within the project directory to render the template site.
-   - This step isn't strictly necessary, but it will confirm that your local project is set up correctly.
-1. Assuming the preceding step goes well, you're now ready to start developing your module.
-   - Replace the placeholder content with your own material.
+### Preparing the renv Project
 
-### Editing
+1. Activate the **renv** project.
+   - Source `R/init_project.R` from the root directory of `my-local-repo`.
+   - If you're using **RStudio**, open `R/init_project.R` and click the "Source" button in the RStudio GUI.
+
+1. Restore the project library.
+   - Source `R/restore_library.R` from the root directory of `my-local-repo`.
+
+> [!NOTE]
+> If you use `make` to build software, you can simply run `make init` from the root directory of `my-local-repo` to set
+> up your **renv** project.
+
+> [!IMPORTANT]
+> After activating the **renv** project, the R session needs to restart so that **renv** can take over the package
+> management. If the R session does not restart, the second step will not correctly restore the packages in the project
+> library.
+> 
+> In most cases, the session should automatically restart.
+>
+> - If you source `R/init_project.R` from **RStudio**, the R session should restart automatically.
+> - If you run `R/init_project.R` in batch mode (e.g., by calling `RScript R/init_project.R` from the terminal), then
+>   the R session dies with your job, so you automatically get a fresh session when you next run R.
+> - If you use `make` to set up the project by running `make init`, the session will automatically restart.
+>
+> However, if you run the scripts interactively or explicitly run `renv::activate()` in an interactive R session, you
+> may need to manually restart the R session before restoring the project library.
+
+### Running a Test Render
+
+If the setup described above worked correctly, you should be able to render the website.
+
+- Run `quarto render` from within the project directory to render the template site.
+- If you're using **RStudio**, you can render the website by selecting the `Build > Build All` menu option.
+
+This step isn't strictly necessary, but it will confirm that your local project is set up correctly.
+
+## Editing
+
+Assuming the setup process went well, you're now ready to start developing your module. Proceed by replacing the
+placeholder content with your own material.
 
 This template repository defines the intended directory structure of new tutorial module repositories, but it also
 includes several example/demonstration files and directories that you don't want in your module repository. When 
 converting the template content, it's important that you change the correct things, but it's also important that you
 keep reserved structural components intact.
 
-#### Components to Keep As-Is
+### Components to Keep As-Is
 
 Do not change the names or locations of the following files.
 
@@ -60,7 +95,7 @@ Do not change the names or locations of the following directories.
 - `_extensions/*`
 - `/renv/*`
 
-#### Components to Modify
+### Components to Modify
 
 Replace all placeholder names with meaningful names:
 
